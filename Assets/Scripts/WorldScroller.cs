@@ -20,7 +20,7 @@ public class WorldScroller : MonoBehaviour
             // do zmiany. Przesuniêcie z uwzglêdnieniem szerokoœci kafelki
             GameObject tileToCreate = tiles[Random.Range(0, tiles.Length)];
             GameObject newTile = Instantiate(tileToCreate,
-                floor1.position + new Vector3(40, 0, 0),
+                floor1.position + new Vector3(32, 0, 0),
                 Quaternion.identity);
 
             Destroy(floor1.gameObject);
