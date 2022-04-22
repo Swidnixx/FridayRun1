@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1901188933
+  m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: -6912761280545875346, guid: 82f77c8a80927f1438ef5a76950e995b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 6752606948376718404}
   - component: {fileID: 6752606948376718405}
   - component: {fileID: 8057550702332084081}
+  - component: {fileID: 8275064798038876362}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -153,8 +154,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1901188933
+  m_SortingLayer: 1
   m_SortingOrder: 2
   m_Sprite: {fileID: -3966654026724937289, guid: a89d136eaee16014cbc355b431ea625c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -193,6 +194,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 0.75}
   m_EdgeRadius: 0
+--- !u!95 &8275064798038876362
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6752606948376718407}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ced6a84e5dfa72940bc299ff047bceb7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6961390002872973715
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,8 +281,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1901188933
+  m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: -6912761280545875346, guid: 82f77c8a80927f1438ef5a76950e995b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
