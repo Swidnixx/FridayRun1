@@ -51,6 +51,12 @@ public class PlayerController : MonoBehaviour
         {
             PlayerDeath();
         }
+
+        if(collision.CompareTag("Coin"))
+        {
+            Destroy(collision.gameObject);
+            GameManager.instance.CoinCollected();
+        }
     }
 
     private void PlayerDeath()
