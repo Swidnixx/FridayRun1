@@ -26,30 +26,51 @@ public class GameManager : MonoBehaviour
     private float score = 0;
     private int coins = 0;
     private int highScore;
+    private const string highScoreKey = "HighScore";
 
     // UI
     public Text scoreText;
     public GameObject resetButton;
     public Text coinText;
+    public Text highscoreText;
+
+    //Powerups
+    public Battery battery;
 
     private void Start()
     {
+        //PlayerPrefs.DeleteAll();
+
         coins = PlayerPrefs.GetInt("Coins");
         coinText.text = coins.ToString();
 
-        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+
+        //SceneManager.sceneUnloaded += s => { print("test"); PlayerPrefs.SetInt(highScoreKey, highScore); }; 
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt(highScoreKey, highScore);
     }
 
     private void FixedUpdate()
     {
         score += worldScrollingSpeed;
+        if(score > highScore)
+        {
+            highScore = (int)score;
+        }
+
         scoreText.text = score.ToString("0");
+        highscoreText.text = highScore.ToString();
     }
 
     public void GameOver()
     {
         Time.timeScale = 0;
         resetButton.SetActive(true);
+        PlayerPrefs.SetInt(highScoreKey, highScore);
     }
 
     public void RestartGame()
@@ -63,5 +84,19 @@ public class GameManager : MonoBehaviour
         coins++;
         coinText.text = coins.ToString();
         PlayerPrefs.SetInt("Coins", coins);
+    }
+
+    internal void BatteryCollected()
+    {
+        battery.isActive = true;
+        worldScrollingSpeed += battery.speedBoost;
+
+        Invoke(nameof(CancelBattery), battery.duration);
+    }
+
+    private void CancelBattery()
+    {
+        battery.isActive = false;
+        worldScrollingSpeed -= battery.speedBoost;
     }
 }
