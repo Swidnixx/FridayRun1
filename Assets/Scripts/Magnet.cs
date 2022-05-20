@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class Battery : Powerup
+public class Magnet : Powerup
 {
-    public float speedBoost = 0.1f;
+    public float range;
+    public float coinsSpeed;
 }

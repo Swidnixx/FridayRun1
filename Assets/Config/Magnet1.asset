@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1af4cd5a39df334d8bdc9e376017c3d, type: 3}
-  m_Name: Battery1
+  m_Script: {fileID: 11500000, guid: 3e4a8031ced878d41a56c35a631fb364, type: 3}
+  m_Name: Magnet1
   m_EditorClassIdentifier: 
   isActive: 0
   duration: 3
-  speedBoost: 0.1
+  range: 5
+  coinsSpeed: 0.5
