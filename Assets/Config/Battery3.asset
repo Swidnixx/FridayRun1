@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1af4cd5a39df334d8bdc9e376017c3d, type: 3}
-  m_Name: Battery2
+  m_Name: Battery3
   m_EditorClassIdentifier: 
-  level: 2
-  upgradeCost: 100
+  level: 3
+  upgradeCost: 10000
   isActive: 0
-  duration: 5
-  speedBoost: 0.2
-  nextUpgrade: {fileID: 11400000, guid: 32d00ed94bf25c1478b876e57c0dd25c, type: 2}
+  duration: 10
+  speedBoost: 0.25
+  nextUpgrade: {fileID: 0}

@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1af4cd5a39df334d8bdc9e376017c3d, type: 3}
-  m_Name: Battery2
+  m_Script: {fileID: 11500000, guid: 23c3f6df716851b48a0e1af21e44c7b3, type: 3}
+  m_Name: PowerupManager
   m_EditorClassIdentifier: 
-  level: 2
-  upgradeCost: 100
-  isActive: 0
-  duration: 5
-  speedBoost: 0.2
-  nextUpgrade: {fileID: 11400000, guid: 32d00ed94bf25c1478b876e57c0dd25c, type: 2}
+  battery: {fileID: 11400000, guid: dd46d1133a052d44ca6a240016394ed4, type: 2}
+  magnet: {fileID: 11400000, guid: 710f6fa9af5622c45b84f0e0803e04a0, type: 2}

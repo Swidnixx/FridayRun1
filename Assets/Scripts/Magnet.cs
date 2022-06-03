@@ -7,4 +7,6 @@ public class Magnet : Powerup
 {
     public float range;
     public float coinsSpeed;
+
+    public Magnet nextUpgrade;
 }

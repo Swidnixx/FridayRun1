@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e4a8031ced878d41a56c35a631fb364, type: 3}
   m_Name: Magnet1
   m_EditorClassIdentifier: 
+  level: 1
+  upgradeCost: 10
   isActive: 0
   duration: 3
   range: 5
   coinsSpeed: 0.5
+  nextUpgrade: {fileID: 11400000, guid: 26121f8bb652b9949a80a1454752809a, type: 2}
