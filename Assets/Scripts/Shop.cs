@@ -26,28 +26,28 @@ public class Shop : MonoBehaviour
 
     void DisplayBattery()
     {
-        string info = "Lvl " + powerupManager.battery.level + "\n";
-        if(powerupManager.battery.nextUpgrade == null)
+        string info = "Lvl " + powerupManager.Battery.level + "\n";
+        if(powerupManager.Battery.nextUpgrade == null)
         {
             info += "Max level";
             batteryButton.interactable = false;
         }
         else
         {
-            info += powerupManager.battery.upgradeCost + " coins to upgrade";
+            info += powerupManager.Battery.upgradeCost + " coins to upgrade";
         }
 
         batteryInfoText.text = info;
     }
     public void UpgradeBattery()
     {
-        if(coins >= powerupManager.battery.upgradeCost)
+        if(coins >= powerupManager.Battery.upgradeCost)
         {
-            coins -= powerupManager.battery.upgradeCost;
+            coins -= powerupManager.Battery.upgradeCost;
             PlayerPrefs.SetInt("Coins", coins);
             coinsText.text = coins.ToString();
 
-            powerupManager.battery = powerupManager.battery.nextUpgrade;
+            powerupManager.Battery = powerupManager.Battery.nextUpgrade;
 
             DisplayBattery();
         }
@@ -59,15 +59,15 @@ public class Shop : MonoBehaviour
 
     void DisplayMagnet()
     {
-        string info = "Lvl " + powerupManager.magnet.level + "\n";
-        if (powerupManager.magnet.nextUpgrade == null)
+        string info = "Lvl " + powerupManager.Magnet.level + "\n";
+        if (powerupManager.Magnet.nextUpgrade == null)
         {
             info += "Max level";
             magnetButton.interactable = false;
         }
         else
         {
-            info += powerupManager.magnet.upgradeCost + " coins to upgrade";
+            info += powerupManager.Magnet.upgradeCost + " coins to upgrade";
         }
 
         magnetInfoText.text = info;
@@ -75,13 +75,13 @@ public class Shop : MonoBehaviour
 
     public void UpgradeMagnet()
     {
-        if (coins >= powerupManager.magnet.upgradeCost)
+        if (coins >= powerupManager.Magnet.upgradeCost)
         {
-            coins -= powerupManager.magnet.upgradeCost;
+            coins -= powerupManager.Magnet.upgradeCost;
             PlayerPrefs.SetInt("Coins", coins);
             coinsText.text = coins.ToString();
 
-            powerupManager.magnet = powerupManager.magnet.nextUpgrade;
+            powerupManager.Magnet = powerupManager.Magnet.nextUpgrade;
 
             DisplayMagnet();
         }

@@ -41,8 +41,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        battery = powerupManager.battery;
-        magnet = powerupManager.magnet;
+        battery = powerupManager.Battery;
+        magnet = powerupManager.Magnet;
         //PlayerPrefs.DeleteAll();
         battery.isActive = false;
         magnet.isActive = false;
